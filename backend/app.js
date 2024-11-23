@@ -6,7 +6,7 @@ const PORT=6005;
 require("./db/conn");
 
 app.use(cors({
-    origin:`${import.meta.env.Questify_BaseURL}/`,
+    origin:`${import.meta.env.BACKEND_URL}/`,
     methods:"GET,POST,PUT,DELETE",
     credentials:true
 }));
