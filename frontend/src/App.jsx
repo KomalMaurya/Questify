@@ -3,6 +3,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import HomePage from './Page/HomePage';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
+import "@fontsource/poppins";
 
 const App = () => {
   return (
