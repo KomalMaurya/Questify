@@ -82,8 +82,8 @@ app.get("/",(req,res)=>{
 app.get("/auth/google",passport.authenticate("google",{scope:["profile","email"]}));
 
 app.get("/auth/google/callback",passport.authenticate("google",{
-    successRedirect:"http://localhost:5173/dashboard",
-    failureRedirect:"http://localhost:5173/login"
+    successRedirect:"https://questify-eight.vercel.app/dashboard",
+    failureRedirect:"https://questify-eight.vercel.app/login"
 }))
 
 app.get("/login/success",async(req,res)=>{
@@ -99,7 +99,7 @@ app.get("/login/success",async(req,res)=>{
 app.get("/logout",(req,res,next)=>{
     req.logout(function(err){
         if(err){return next(err)}
-        res.redirect("http://localhost:5173");
+        res.redirect("https://questify-eight.vercel.app/");
     })
 })
 
