@@ -22,6 +22,30 @@ html,body{
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
+.btn-hover:hover{
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+}
+
+.or-div::before{
+  content: '';
+  position: relative;
+  width: 15px;
+  height: 2px;
+  margin: 0px 2px;
+  background: rgb(112, 110, 110);
+}
+
+.or-div::after{
+  content: '';
+  position: relative;
+  width: 15px;
+  height: 2px;
+  margin: 0px 2px;
+  background: rgb(112, 110, 110);
+}
+
 @media screen and (max-width:500px) {
   .signup , .Login{
       height: 100%;

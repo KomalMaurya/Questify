@@ -1,5 +1,5 @@
 import { FcGoogle } from "react-icons/fc";
-import { ImLinkedin } from "react-icons/im";
+import { ImGithub } from "react-icons/im";
 import element from '/element.jpg';
 import { CgProfile } from "react-icons/cg";
 import { RiLockPasswordLine } from "react-icons/ri";
@@ -26,7 +26,7 @@ const Login = () => {
                         <h1 className="text-3xl font-bold mt-[47px] text-center text-black">Login</h1>
                         <div className="button-div flex-wrap flex items-center justify-center w-[100%] gap-[20px]">
                             <button className='flex items-center justify-center gap-[5px] p-[7px] rounded-md border-[1px] border-slate-500 hover:text-slate-500'> <FcGoogle className='inline' /> Sign In with Google</button>
-                            <button className='flex items-center justify-center gap-[5px] p-[7px] rounded-md border-[1px] border-slate-500 hover:text-slate-500 top-[-2px] relative'> <ImLinkedin className='inline text-blue-900' /> Sign In with Linkedin</button>
+                            <button className='flex items-center justify-center gap-[5px] p-[7px] rounded-md border-[1px] border-slate-500 hover:text-slate-500 top-[-2px] relative'> <ImGithub className='inline text-black' /> Sign In with GitHub</button>
                         </div>
 
                         <div className="or-div flex items-center justify-center w-[100%] relative uppercase">

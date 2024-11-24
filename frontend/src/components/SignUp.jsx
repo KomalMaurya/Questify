@@ -1,6 +1,6 @@
 // import React from 'react';
 import { FcGoogle } from "react-icons/fc";
-import { ImLinkedin } from "react-icons/im";
+import { ImGithub } from "react-icons/im";
 import element from '/element.jpg';
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineMail } from "react-icons/md";
@@ -18,7 +18,7 @@ const SignUp = () => {
                     <div className="side-text rounded-l-2xl flex flex-col items-center gap-[20px] min-h-[80vh] relative w-[40%] bg-[var(--primary-color)]">
                         <div className="text flex flex-col w-[100%] mt-[20px] items-center gap-[20px]">
                             <h1 className="text-3xl font-bold mt-6 text-white text-center">Questify</h1>
-                            <p className='text-white font-light text-xl text-center'>Transform your goals into epic achievements with Questify!</p>
+                            <p className='text-white font-light text-medium text-center'>Transform your goals into epic achievements with Questify!</p>
                             <img src={element} className='element z-30 relative right-[-20%] rounded-md' alt="" />
                         </div>
                     </div>
@@ -26,7 +26,7 @@ const SignUp = () => {
                         <h1 className="text-2xl font-bold mt-[47px] text-center text-black">Create Account</h1>
                         <div className="button-div flex-wrap flex items-center justify-center w-[100%] gap-[20px]">
                             <button className='flex items-center justify-center gap-[5px] p-[7px] rounded-md border-[1px] border-slate-500 hover:text-slate-500'> <FcGoogle className='inline' /> Sign In with Google</button>
-                            <button className='flex items-center justify-center gap-[5px] p-[7px] rounded-md border-[1px] border-slate-500 hover:text-slate-500 top-[-2px] relative'> <ImLinkedin className='inline text-blue-900' /> Sign In with Linkedin</button>
+                            <button className='flex items-center justify-center gap-[5px] p-[7px] rounded-md border-[1px] border-slate-500 hover:text-slate-500 top-[-2px] relative'> <ImGithub className='inline text-black' /> Sign In with GitHub</button>
                         </div>
 
                         <div className="or-div flex items-center justify-center w-[100%] relative uppercase">
