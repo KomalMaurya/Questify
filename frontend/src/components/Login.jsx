@@ -11,6 +11,9 @@ import { Link } from 'react-router-dom';
 
 
 const Login = () => {
+    const loginwithGoogle=()=>{
+        window.open("http://localhost:6005/auth/google/callback","_self")
+    }
     return (
         <>
             <div className="Login-container flex-wrap flex items-center justify-center w-[100vw] min-h-[100vh]">
@@ -25,7 +28,7 @@ const Login = () => {
                     <div className="form-div flex rounded-2xl gap-[20px] flex-col items-center min-h-[80vh] relative w-[60%] bg-white">
                         <h1 className="text-3xl font-bold mt-[47px] text-center text-black">Login</h1>
                         <div className="button-div flex-wrap flex items-center justify-center w-[100%] gap-[20px]">
-                            <button className='flex items-center justify-center gap-[5px] p-[7px] rounded-md border-[1px] border-slate-500 hover:text-slate-500'> <FcGoogle className='inline' /> Sign In with Google</button>
+                            <button className='flex items-center justify-center gap-[5px] p-[7px] rounded-md border-[1px] border-slate-500 hover:text-slate-500' onClick={loginwithGoogle}> <FcGoogle className='inline' /> Sign In with Google</button>
                             <button className='flex items-center justify-center gap-[5px] p-[7px] rounded-md border-[1px] border-slate-500 hover:text-slate-500 top-[-2px] relative'> <ImGithub className='inline text-black' /> Sign In with GitHub</button>
                         </div>
 
