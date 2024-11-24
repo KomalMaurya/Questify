@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *{
   margin: 0;
   padding: 0;
@@ -11,17 +15,17 @@ html,body{
   font-family: "Poppins";
 }
 
-.icon-box{
-  width: 3rem;
-  padding: 0.1rem 0.1rem;
-  border-radius: 0.5rem;
-  display: grid;
-  place-items: center;
-  margin-right: 0.5rem;
+
+.headline{
+  margin-top: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-.icon-box-1{
-  display: flex;
-  font-size: 2rem;
-  margin: 2rem 1rem;
+.para{
+  text-align: center;
 }

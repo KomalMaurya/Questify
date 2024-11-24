@@ -1,7 +1,7 @@
 // import React from "react";
 import icon from '/logo.svg';
 const Header = () => {
-    const defaultcolor="#451c4a";
+    const defaultcolor="#80288b";
     const backgroundColorObject={backgroundColor:defaultcolor};
   return (
     <header>
@@ -9,14 +9,14 @@ const Header = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
             <div className="text-center sm:text-left mb-7 sm:mb-0">
                 {/*Name of the App*/}
-                <div className="flex gap-2 items-center sm:justify-start justify-center">
-                    <span className="font-light flex items-center gap-2 icon-box-1">
+                <div className="flex gap-3 items-center sm:justify-start justify-center">
+                    <span className="text-2xl font-light flex items-center">
                         {/* icon */}
-                        <div style={backgroundColorObject} className="icon-box">
+                        <div style={backgroundColorObject} className="p-2 rounded-md mr-2.5">
                             <img src={icon} height={45} width={40}/>
                         </div>
                         {/* {Name of the app} */}
-                        <span style={{color:"#451c4a"}} className="font-bold text-mainColor">
+                        <span style={{color:"#80288b"}} className="font-bold text-mainColor">
                             Quest
                         </span>
                         <span className="font-light">ify</span>
@@ -25,6 +25,19 @@ const Header = () => {
             </div>
             {}
             {/* buttons */}
+            <div className='mt-4 flex gap-4 sm:mt-0 sm:flex-row sm:items-center btn-box'>
+              <button 
+              style={backgroundColorObject}
+              className={"block sm:w-32 w-full rounded-lg px-9 py-3  text-sm font-medium text-white transition focus:outline-none"}
+              >
+                Sign In
+              </button>
+              <button 
+              className={`block sm:w-32 w-full border rounded-lg px-9 py-3  text-sm font-medium transition focus:outline-none hover:bg-customPurple hover:text-white border-customPurple text-customPurple` } type="button"
+              >
+                Sign Up
+              </button>
+            </div>
         </div>
       </div>
     </header>
