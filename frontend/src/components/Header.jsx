@@ -1,4 +1,5 @@
 // import React from "react";
+import {Link} from 'react-router-dom';
 import icon from '/logo.svg';
 const Header = () => {
     const defaultcolor="#80288b";
@@ -26,17 +27,17 @@ const Header = () => {
             {}
             {/* buttons */}
             <div className='mt-4 flex gap-4 sm:mt-0 sm:flex-row sm:items-center btn-box'>
-              <button 
+            <Link to="/login"> <button 
               style={backgroundColorObject}
               className={"block sm:w-32 w-full rounded-lg px-9 py-3  text-sm font-medium text-white transition focus:outline-none"}
               >
-                Sign In
-              </button>
-              <button 
+              Sign In
+              </button></Link>  
+              <Link to='/signup'><button 
               className={`block sm:w-32 w-full border rounded-lg px-9 py-3  text-sm font-medium transition focus:outline-none hover:bg-customPurple hover:text-white border-customPurple text-customPurple` } type="button"
               >
-                Sign Up
-              </button>
+               Sign Up
+              </button></Link> 
             </div>
         </div>
       </div>
