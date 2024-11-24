@@ -19,7 +19,7 @@ const SignUp = () => {
                         <div className="text flex flex-col w-[100%] mt-[20px] items-center gap-[20px]">
                             <h1 className="text-3xl font-bold mt-6 text-white text-center">Questify</h1>
                             <p className='text-white font-light text-xl text-center'>Transform your goals into epic achievements with Questify!</p>
-                            <img src={element} className='z-30 relative right-[-20%] rounded-md' alt="" />
+                            <img src={element} className='element z-30 relative right-[-20%] rounded-md' alt="" />
                         </div>
                     </div>
                     <div className="form-div flex rounded-2xl gap-[20px] flex-col items-center min-h-[80vh] relative w-[60%] bg-white">
