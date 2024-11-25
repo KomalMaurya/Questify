@@ -4,8 +4,6 @@ import Sidebar from "../sidebar/sidebar";
 const Dashboard = () => {
     const [userdata,setUserdata]=useState({});
     console.log("response",userdata);
-    const defaultcolor="#80288b";
-    const backgroundColorObject={backgroundColor:defaultcolor};
 
     const getUser=async()=>{
         try {
@@ -35,23 +33,36 @@ const Dashboard = () => {
                 <>
                 
                 
-                <div className="absolute left-[19%] w-4/5 h-screen bg-slate-50 ">
-                    <h2>Hello</h2>
-                    <li style={{color:"black"}} className="absolute right-[0]">
-                <li className="text-black text-center">{userdata.displayName}</li>
-                <li>
-                    <img src={userdata.image} style={{width:"50px",borderRadius:"5"}}/>
-                </li>
-                <li onClick={logout} style={backgroundColorObject} className="block sm:w-32 w-full rounded-lg px-9 py-3  text-sm font-medium text-white transition focus:outline-none cursor-pointer">Logout</li>
-                <li >Home</li>
-                </li>
+                <div className="absolute flex left-[19%] w-128 h-screen  gap-2 bg-slate-50">
+                    <div className="w-2/3 h-screen  mt-5 ml-4 mr-3 rounded-md">
+                        <div className="bg-white h-20 items-center p-5">
+                            <div className="flex">
+                            <h2 className="text-xl font-bold">Hey There! </h2>&nbsp;<li className="text-xl text-black">{userdata.displayName}</li>
+                            <div>
+                                <input type="text" placeholder="Search" className="border bg-slate-200 p-3 rounded-3xl focus:outline-none ml-20 -mt-10 -mb-8" ></input>
+                            </div>
+                            </div>
+                            <span className="text-slate-400 font-thin -mt-3">welcome back!</span>
+                        </div>
+                        
+                    </div>
+                    <div className="w-1/3 bg-white mt-5 mr-4 rounded-md">
+                        <li style={{color:"black"}} className="absolute right-[0]">
+                        
+                        <li>
+                            <img src={userdata.image} style={{width:"50px",borderRadius:"50%"}}/>
+                        </li>
+                        <li onClick={logout} className="block sm:w-32 w-full rounded-lg px-9 py-3  text-sm font-medium text-white transition focus:outline-none cursor-pointer hover:text-customPurple hover:border bg-customPurple border-customPurple hover:bg-transparent">Logout</li>
+                        <li >Home</li>
+                        </li>
+                    </div>
                 </div>
                 <Sidebar/>
                 </>
             ):
             <>
-            <li style={backgroundColorObject}
-            className="block sm:w-32 w-full rounded-lg px-9 py-3  text-sm font-medium text-white transition focus:outline-none">Login</li>
+            <li
+            className="block sm:w-32 w-full rounded-lg px-9 py-3 hover:bg-white hover:text-customPurple bg-customPurple hover:border border-customPurple text-sm font-medium text-white transition focus:outline-none ">Login</li>
             <li >Home</li>
             </>
         }
