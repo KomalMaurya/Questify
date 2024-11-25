@@ -13,14 +13,15 @@ const cliend_secretKey="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"
 const session=require("express-session");
 const passport=require("passport");
 const Oauth2GoogleLogin = require("passport-google-oauth2").Strategy; 
-
+const F_URL=process.env.FRONTEND_URL;
+const B_URL=process.env.BACKEND_URL;
 
 app.use(cors(
-    // {
-//     origin:`${import.meta.env.BACKEND_URL}`,
-//     methods:"GET,POST,PUT,DELETE",
-//     credentials:true
-// }
+    {
+    origin:"http://localhost:5173",
+    methods:"GET,POST,PUT,DELETE",
+    credentials:true
+}
 ));
 
 app.use(express.json());
@@ -81,12 +82,11 @@ app.get("/",(req,res)=>{
 app.get("/auth/google",passport.authenticate("google",{scope:["profile","email"]}));
 
 app.get("/auth/google/callback",passport.authenticate("google",{
-    successRedirect:"https://questify-eight.vercel.app/dashboard",
-    failureRedirect:"https://questify-eight.vercel.app/login"
+    successRedirect:"http://localhost:5173/dashboard",
+    failureRedirect:"http://localhost:5173/login"
 }))
 
 app.get("/login/success",async(req,res)=>{
-    console.log("request",req.user)
 
     if(req.user){
         res.status(200).json({message:"User Login",user:req.user})
@@ -98,7 +98,7 @@ app.get("/login/success",async(req,res)=>{
 app.get("/logout",(req,res,next)=>{
     req.logout(function(err){
         if(err){return next(err)}
-        res.redirect("https://questify-eight.vercel.app/");
+        res.redirect("http://localhost:5173");
     })
 })
 

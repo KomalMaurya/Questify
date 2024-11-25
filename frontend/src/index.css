@@ -46,6 +46,14 @@ html,body{
   background: rgb(112, 110, 110);
 }
 
+.active{
+  color: white;
+  background: #80288b;
+  border-radius: 0.5rem;
+  width: 70%;
+  font-weight: bold;
+}
+
 @media screen and (max-width:500px) {
   .signup , .Login{
       height: 100%;
