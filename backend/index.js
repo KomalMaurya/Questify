@@ -77,6 +77,14 @@ app.get("/",(req,res)=>{
     res.status(200).json("server start")
 });
 
+app.get("/time",(req,res)=>{
+    setTimeout(()=>{
+        return res.json({
+            success:true,
+            message:"I've waited seconds"
+        });
+    },11000);
+});
 
 //initial google oauth login
 app.get("/auth/google",passport.authenticate("google",{scope:["profile","email"]}));
