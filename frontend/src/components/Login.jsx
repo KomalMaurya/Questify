@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
     const loginwithGoogle=()=>{
-        window.open("https://software-project-indol.vercel.app/api/auth/google/callback","_self")
+        window.open("https://software-project-indol.vercel.app/auth/google/callback","_self")
     }
     return (
         <>
