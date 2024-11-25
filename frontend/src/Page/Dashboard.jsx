@@ -7,7 +7,7 @@ const Dashboard = () => {
 
     const getUser=async()=>{
         try {
-            const response=await axios.get("https://software-project-indol.vercel.app/login/success",{withCredentials:true});
+            const response=await axios.get("http://software-project-indol.vercel.app/login/success",{withCredentials:true});
             
             setUserdata(response.data.user)
         } catch (error) {
@@ -17,7 +17,7 @@ const Dashboard = () => {
 
     //logout
     const logout=()=>{
-        window.open("https://software-project-indol.vercel.app/logout","_self")
+        window.open("http://software-project-indol.vercel.app/logout","_self")
     }
 
     useEffect(()=>{
