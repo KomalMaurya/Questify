@@ -4,8 +4,8 @@ const app = express();
 const cors = require("cors");
 const { connect } = require("mongoose");
 const PORT=process.env.PORT||'6005'
-require("./db/conn");
-const userdb=require("./model/userSchema")
+require("../db/conn");
+const userdb=require("../model/userSchema")
 
 const cliend_id="52611357937-8j1oj9tldvh36jt320j2rqg8hn72v8la.apps.googleusercontent.com"
 const cliend_secretKey="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"
